@@ -423,49 +423,55 @@ circle {
 /* image gallery */
 .image-slider {
   background: transparent;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 2rem; */
-  /* min-height: 100vh; */
 }
 
 .swiper {
   background-color: transparent;
   width: 100%;
-  padding-top: 50px !important;
+  padding-top: 30px !important;
   padding-bottom: 50px !important;
 }
 
 @media (min-width: 426px) {
   .swiper-slide {
-    /* background-position: center;
-    background-size: cover; */
-    width: 400px !important;
-    height: 300px !important;
+    width: 440px !important;
+    height: 310px !important;
   }
 }
 
 .swiper-slide img {
-  /* display: block; */
-  width: 400px;
-  border-radius: 1rem;
-  border: 2px solid #dee995;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0005) !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.swiper-slide-active img {
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(96, 165, 250, 0.15);
 }
 
 .buttons {
-
-  color: #dee995 !important;
+  color: #60a5fa !important;
   font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.buttons:hover {
+  transform: scale(1.15);
 }
 
 @media (max-width: 475px) {
   .swiper-slide {
-    width: 250px;
+    width: 280px;
+    height: 200px;
   }
 
   .swiper-slide img {

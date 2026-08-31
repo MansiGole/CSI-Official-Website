@@ -77,13 +77,18 @@ AOS.init({
 });
 
 $('.count').each(function () {
-  $(this).prop('Counter', 0).animate({
-    Counter: $(this).text()
+  var $this = $(this);
+  var countTo = parseInt($this.text(), 10) || 0;
+  $({ Counter: 0 }).animate({
+    Counter: countTo
   }, {
-    duration: 1500,
-    easing: 'linear',
-    step: function (now) {
-      $(this).text(Math.ceil(now));
+    duration: 1800,
+    easing: 'swing',
+    step: function () {
+      $this.text(Math.ceil(this.Counter) + '+');
+    },
+    complete: function () {
+      $this.text(countTo + '+');
     }
   });
 });
