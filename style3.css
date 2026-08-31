@@ -276,22 +276,27 @@ circle {
   .inovation-inner-card-description {
     /* font-size: 25px; */
   }
+
   .inovation-inner-card-text {
     width: 100%;
   }
-  .imgm{
+
+  .imgm {
     height: 100%;
     width: 100%;
   }
-  .imagem{
+
+  .imagem {
     height: 50%;
     margin-bottom: 5%;
   }
+
   .swiper-slide {
     width: 100% !important;
     height: 100% !important;
   }
 }
+
 /* --------- /inovation---------------------------------*/
 
 /* --------- enigma---------------------------------*/
@@ -367,12 +372,13 @@ circle {
     height: 90%;
   }
 
-  .enigma-runnerup2{
+  .enigma-runnerup2 {
     width: 48%;
     float: right;
 
   }
-  .enigma-runnerup{
+
+  .enigma-runnerup {
     width: 48%;
 
   }
@@ -391,17 +397,21 @@ circle {
   .enigma-inner-card-description {
     /* font-size: 25px; */
   }
+
   .enigma-inner-card-text {
     width: 100%;
   }
-  .imgm{
+
+  .imgm {
     height: 100%;
     width: 100%;
   }
-  .imagem{
+
+  .imagem {
     height: 50%;
     margin-bottom: 5%;
   }
+
   .swiper-slide {
     width: 100% !important;
     height: 100% !important;
@@ -412,7 +422,7 @@ circle {
 
 /* image gallery */
 .image-slider {
-  background: #000;
+  background: transparent;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -424,7 +434,7 @@ circle {
 }
 
 .swiper {
-  background-color: #04042c;
+  background-color: transparent;
   width: 100%;
   padding-top: 50px !important;
   padding-bottom: 50px !important;

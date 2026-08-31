@@ -9,6 +9,12 @@
   <link rel="shortcut icon" href="./final-image1/CSI new Logo Crest Trans White.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=Space+Mono:wght@400;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
   <link rel="shortcut icon" href="./assets/CSI (WHITE) LOGO.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
@@ -23,150 +29,251 @@
 </head>
 
 <body>
-  <!-- NAVBAR STARTS -->
-  <div class="body-image">
-    <div id="particles-js"> </div>
-    <div class="myContent">
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-          <div class="navbar-brand">
-            <img src="./assets/CSI (WHITE) LOGO.png" alt="csi logo" />
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto" id="#mainNav">
-              <li class="nav-item">
-                <a class="nav-link" href="#cm">ABOUT US</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#magzine">MAGAZINE</a>
-              </li>
-              <!-- <li class="nav-item" id="special">
-                <a class="nav-link" href="https://innovations-csi-siesgst.herokuapp.com/">INNOVATIONS 2K22</a>
-              </li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="#event">EVENTS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="membership.html">MEMBERSHIP</a>
-              </li>
-              <li class="nav-item" id="underline">
-                <a class="nav-link" href="team.html">TEAM</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#sponsors">SPONSORS & CONTACT US</a>
-              </li>
-              <li>
-                <a href="ar-vr.html"></a>
-              </li>
-            </ul>
+  <!-- MAIN WINDOW NAVBAR (Centered Navigation) -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-window-nav terminal-nav-unified" id="main-window-nav">
+    <div class="container-fluid justify-content-center px-3 px-md-4">
+      <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMain"
+        aria-controls="navbarNavMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center text-center" id="navbarNavMain">
+        <ul class="navbar-nav mx-auto terminal-nav-links justify-content-center align-items-center" id="mainNavOuter">
+          <li class="nav-item">
+            <a class="nav-link" href="#cm">[ABOUT US]</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#magzine">[MAGAZINE]</a>
+          </li>
+          <li class="nav-item nav-item-logo">
+            <a class="nav-link nav-logo-link" href="#top" id="nav-brand-logo" title="Back to CSI Screen">
+              <img src="images/csi-emblem.svg" alt="CSI Logo" class="nav-center-emblem" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#event">[EVENTS]</a>
+          </li>
+          <li class="nav-item" id="underline">
+            <a class="nav-link" href="team.html">[TEAM]</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PHYSICAL MONITOR ZOOM STAGE (Fixed Viewport Stage) -->
+  <div class="hero-sticky-stage" id="hero-sticky-stage">
+    <!-- Interactive Background Dots Canvas (Behind monitor) -->
+    <canvas id="hero-bg-dots-canvas" class="hero-bg-dots-canvas"></canvas>
+
+    <div class="hero-zoom-container" id="hero-zoom-container">
+      <div class="monitor-stage-box" id="monitor-stage-box">
+
+        <!-- SCREEN VIEWPORT (Clipped inside monitor display area on desktop, full screen on mobile) -->
+        <div class="monitor-screen-viewport" id="monitor-screen-viewport">
+          <div class="monitor-screen-inner unzoomed-locked" id="monitor-screen-inner">
+            <div class="terminal-stage">
+              <!-- Interactive Repulsion Dot Grid Canvas (Inside monitor) -->
+              <canvas id="terminal-dots-canvas" class="terminal-dots-canvas"></canvas>
+
+              <!-- Monitor Screen Top Centered Status Bar / Navbar (Exact Identical Markup) -->
+              <nav class="navbar navbar-expand-lg navbar-dark terminal-monitor-nav terminal-nav-unified"
+                id="terminal-monitor-nav">
+                <div class="container-fluid justify-content-center px-3 px-md-4">
+                  <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavInner" aria-controls="navbarNavInner" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-center text-center" id="navbarNavInner">
+                    <ul class="navbar-nav mx-auto terminal-nav-links justify-content-center align-items-center" id="mainNav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#cm">[ABOUT US]</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#magzine">[MAGAZINE]</a>
+                      </li>
+                      <li class="nav-item nav-item-logo">
+                        <a class="nav-link nav-logo-link" href="#top" title="Back to CSI Screen">
+                          <img src="images/csi-emblem.svg" alt="CSI Logo" class="nav-center-emblem" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#event">[EVENTS]</a>
+                      </li>
+                      <li class="nav-item" id="underline-inner">
+                        <a class="nav-link" href="team.html">[TEAM]</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+              <!-- TERMINAL HERO MAIN CONTENT (Pure Massive CSI Centered) -->
+              <div class="terminal-hero-container">
+                <div class="terminal-hero-center">
+
+                  <!-- Pure Massive Centered CSI with Interactive LED Letters -->
+                  <h1 class="terminal-main-csi-pure">
+                    <span class="led-letter active" id="led-c" data-letter="C" title="">C</span><span
+                      class="led-letter active" id="led-s" data-letter="S" title="">S</span><span
+                      class="led-letter active" id="led-i" data-letter="I" title="">I</span>
+                  </h1>
+
+                </div>
+
+                <!-- Minimal Scroll / Click To Enter Indicator at Bottom of Screen -->
+                <div class="terminal-scroll-hint" id="terminal-enter-trigger" role="button" tabindex="0"
+                  title="Click or scroll to enter">
+                  <span class="hint-arrow">&darr;</span> <span class="hint-text">SCROLL TO ENTER</span>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
-      </nav>
 
-      <!-- NAVBAR ENDS -->
+        <!-- PHYSICAL MONITOR DESK SCENE OVERLAY (Image from assets/hero-desk-clean.png) -->
+        <img src="./images/hero-desk-clean.png" alt="Physical Monitor Desk Scene" class="hero-desk-frame-img"
+          id="hero-desk-frame-img" />
 
-      <!-- HERO STARTS -->
+      </div>
+    </div>
+  </div>
 
-      <section id="hero" class="min-vh-100 d-flex align-items-center">
-        <div class="container" id="hero-container">
-          <div class="row" id="hero-row">
-            <div class="col-12" id="hero-col">
-              <h1 data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
-                class="text-uppercase text-white fw-semibold display-1" id="hero-h1">
-                CSI - SIESGST
-              </h1>
-              <h5 class="text-white mt-3 mb-4" data-aos="flip-right" data-aos-easing="ease-out-cubic"
-                data-aos-duration="1000" id="hero-h5">
-                The CSI Campus Chapter of SIES-GST is a part of the well <br>
-                established network of student branches across the country<span> .</span>
-              </h5>
-              <div data-aos="zoom-out-right" data-aos-delay="300" class="hero-div">
-                <a href="#cm" class="btn btn-brand me-2">Get Started</a>
-                <a href="team.html" class="btn btn-brand me-2">Our TEAM</a>
+  <!-- HERO SCROLL TRACK (Creates the scroll height for camera zoom interaction) -->
+  <div id="hero-scroll-track" class="hero-scroll-track"></div>
+
+  <!-- ABOUT US SECTION (Modern Minimalist Cyber Editorial Theme) -->
+  <section id="cm" class="terminal-about-section">
+    <div class="container terminal-about-container">
+
+      <!-- Minimalist Editorial Section Header -->
+      <div class="cyber-about-header" data-aos="fade-up">
+        <div class="cyber-section-index">
+          <span class="index-badge">01</span>
+          <span class="index-line"></span>
+          <span class="index-label">OVERVIEW &bull; SIES GST CHAPTER</span>
+        </div>
+        <h2 class="cyber-about-hero-title">
+          PIONEERING THE DIGITAL FRONTIER
+        </h2>
+        <p class="cyber-about-hero-subtitle">
+          Computer Society of India &bull; SIES Graduate School of Technology Student Chapter
+        </p>
+      </div>
+
+      <!-- Content Block 1: The National IT Legacy -->
+      <div class="cyber-about-block" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 cyber-content-col">
+            <div class="cyber-block-label-wrapper">
+              <span class="cyber-block-label">// THE FOUNDATION &amp; LEGACY</span>
+            </div>
+            <h3 class="cyber-block-heading">
+              India's Premier <span class="highlight-cyan">IT Association</span>
+            </h3>
+            <p class="cyber-body-lead">
+              The <strong class="text-white">Computer Society of India</strong> has stood at the vanguard of the computing revolution since its inception in <span class="text-white fw-bold">1965</span>.
+            </p>
+            <p class="cyber-body-text">
+              Born from a visionary initiative to foster national knowledge exchange and technological research, CSI has evolved into the country’s largest and most distinguished professional IT community.
+            </p>
+
+            <!-- Minimalist Sculpted Stats -->
+            <div class="cyber-stats-row">
+              <div class="cyber-stat-item">
+                <span class="cyber-stat-num">72</span>
+                <span class="cyber-stat-caption">CHAPTERS ACROSS INDIA</span>
+              </div>
+              <div class="cyber-stat-item">
+                <span class="cyber-stat-num">511</span>
+                <span class="cyber-stat-caption">STUDENT BRANCHES</span>
+              </div>
+              <div class="cyber-stat-item">
+                <span class="cyber-stat-num">100K+</span>
+                <span class="cyber-stat-caption">ACTIVE MEMBERS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 cyber-visual-col">
+            <div class="cyber-modern-media">
+              <div class="media-corner-mark corner-tl">+</div>
+              <div class="media-corner-mark corner-tr">+</div>
+              <div class="media-corner-mark corner-bl">+</div>
+              <div class="media-corner-mark corner-br">+</div>
+              <video class="cyber-video-player" autoplay loop muted playsinline>
+                <source src="images/1.mp4" type="video/mp4" />
+              </video>
+              <div class="media-status-pill">
+                <span class="status-indicator-dot"></span>
+                <span>CAMPUS ARCHIVE &bull; 01</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="custom-shape-divider-bottom-1660889963">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path
-              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-              class="shape-fill"></path>
-          </svg>
-        </div>
-      </section>
-    </div>
-
-    <!-- HERO ENDS -->
-
-  </div>
-
-  <!---about-->
-
-  <div class="container">
-    <div id="cm" class="inovation-card-main u-clearfix1">
-      <div class="hm">
-        <h2 id="headingm">ABOUT US</h2>
       </div>
-      <div class="innerdiv">
 
-        <div class="inovation-inner-card-text">
-
-
-          <span id="cdm" class="inovation-inner-card-description">
-            <div class="hm" id="heading1">
-              <h2>WHAT IS CSI ?</h2>
+      <!-- Content Block 2: Student Chapter Initiatives & Innovation -->
+      <div class="cyber-about-block cyber-block-reverse" data-aos="fade-up">
+        <div class="row align-items-center g-5 flex-lg-row-reverse">
+          <div class="col-lg-6 cyber-content-col">
+            <div class="cyber-block-label-wrapper">
+              <span class="cyber-block-label">// STUDENT COUNCIL INITIATIVES</span>
             </div>
-            <p class="para-box__modifier">
-              The Computer Society of India has come a long way since its foundation in 1965. The founding members felt
-              the need to organize their activities and also wanted to share their knowledge and exchange ideas about
-              the computer sector which was then newly emerging. Today the CSI takes pride in being the largest and most
-              professionally managed association of and for IT professionals in India. It has 72 chapters across India,
-              511 student branches, and 100,000 members. The purpose of the Society are, Scientific and Educational
-              directed towards the advancement of the theory and practice of computer science and IT.
+            <h3 class="cyber-block-heading">
+              Innovate, Build &amp; <span class="highlight-cyan">Lead Together</span>
+            </h3>
+            <p class="cyber-body-lead">
+              The <strong class="text-white">CSI Student Chapter of SIES-GST</strong> is driven by an elected council of passionate student developers, designers, and tech leaders.
             </p>
-          </span>
-        </div>
-        <div class="imagem">
-          <video id="v2" class="imgm" width="82%" height=40% autoplay loop muted>
-            <source src="images/1.mp4" type="video/mp4" />
+            <p class="cyber-body-text">
+              We curate high-impact technical experiences year-round &mdash; from our flagship National Technical Project Competition <strong class="text-white">INNOVATIONS</strong>, to intensive hackathons, industry expert masterclasses, and hands-on workshops across AI, Cyber Security, and Web3.
+            </p>
 
-          </video>
-        </div>
-      </div>
-      <div class="innerdiv" id="i2">
-        <div class="imagem">
-          <video id="v2" class="imgm" width="82%" height=auto autoplay loop muted>
-            <source src="images/2.mp4" type="video/mp4" />
-
-          </video>
-        </div>
-
-        <div class="inovation-inner-card-text">
-
-
-          <span id="cdm" class="inovation-inner-card-description">
-            <div class="hm">
-              <h2>WHAT WE DO ?</h2>
+            <div class="cyber-feature-pills">
+              <div class="cyber-pill-item">
+                <span class="pill-dot"></span>
+                <span>INNOVATIONS &bull; National Tech Fest</span>
+              </div>
+              <div class="cyber-pill-item">
+                <span class="pill-dot"></span>
+                <span>Hands-on Technical Workshops</span>
+              </div>
+              <div class="cyber-pill-item">
+                <span class="pill-dot"></span>
+                <span>Hackathons &amp; Coding Sprints</span>
+              </div>
+              <div class="cyber-pill-item">
+                <span class="pill-dot"></span>
+                <span>MegaByte Technical Magazine</span>
+              </div>
             </div>
-            <p class="para-box__modifier">
-              The CSI Campus Chapter of SIES-GST is a part of the well established network of student branches across
-              the country. The Chapter activities are managed by a committee of elected members. The Chapter annually
-              conducts INNOVATIONS, a National Level Technical Project Competition. Additionally, various workshops,
-              seminars, programming contests, are conducted for the members of the CSI Campus Chapter. The idea is to
-              spread the knowledge, and provide opportunities to as many interested as possible.
-            </p>
-          </span>
+          </div>
+
+          <div class="col-lg-6 cyber-visual-col">
+            <div class="cyber-modern-media">
+              <div class="media-corner-mark corner-tl">+</div>
+              <div class="media-corner-mark corner-tr">+</div>
+              <div class="media-corner-mark corner-bl">+</div>
+              <div class="media-corner-mark corner-br">+</div>
+              <video class="cyber-video-player" autoplay loop muted playsinline>
+                <source src="images/2.mp4" type="video/mp4" />
+              </video>
+              <div class="media-status-pill">
+                <span class="status-indicator-dot"></span>
+                <span>STUDENT INITIATIVES &bull; 02</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
-  </div>
-  <!-- </div>
-  </div>   -->
+  </section>
+
+  <!-- Super Thin Faint Section Divider (35% Opacity) -->
+  <div class="terminal-section-divider"></div>
 
   <!---magzine-->
 
@@ -256,6 +363,8 @@
 
   </section>
 
+  <!-- Super Thin Faint Section Divider (35% Opacity) -->
+  <div class="terminal-section-divider"></div>
 
   <!--   event   -->
   <div id="event">
@@ -578,10 +687,9 @@
       </div>
     </div>
   </div>
-  <!--   /outrech   -->
+  <!-- Super Thin Faint Section Divider (35% Opacity) -->
+  <div class="terminal-section-divider"></div>
 
-
-  <br><br>
   <!-- partial:index.partial.html -->
   <section id="sponsors">
     <h1
@@ -608,6 +716,10 @@
       </div>
     </div>
   </section>
+
+  <!-- Super Thin Faint Section Divider (35% Opacity) -->
+  <div class="terminal-section-divider"></div>
+
   <section>
     <h1
       style="font-size: xx-large; text-align: center; margin-bottom: 20px;color: aliceblue;text-decoration: underline;">
@@ -637,6 +749,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Super Thin Faint Section Divider (35% Opacity) -->
+  <div class="terminal-section-divider"></div>
 
   <footer class="footer-area">
     <div class="main">
