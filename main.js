@@ -509,7 +509,7 @@ function setupInteractiveDotCanvas(canvasId, stageElement, isGlobalWindow) {
           const r = dot.radius + glowFactor * 0.35;
           ctx.fillRect(dot.x - r, dot.y - r, r * 2, r * 2);
         } else {
-          ctx.fillStyle = 'rgba(96, 165, 250, 0.37)';
+          ctx.fillStyle = 'rgba(96, 165, 250, 0.4)';
           ctx.fillRect(dot.x - dot.radius, dot.y - dot.radius, dot.radius * 2, dot.radius * 2);
         }
       }
@@ -536,6 +536,117 @@ function initNavLogoPan() {
   });
 }
 
+/*==================================================
+  WHAT WE DO - INTERACTIVE HOVER SPOTLIGHT CONTROLLER
+==================================================*/
+function initWhatWeDoSpotlight() {
+  const spotlightData = {
+    innovations: {
+      img: 'images/i (1).jpg',
+      badge: 'NATIONAL LEVEL TECH FEST',
+      cat: '// FLAGSHIP NATIONAL EXPO',
+      title: 'INNOVATIONS 2K25',
+      desc: 'SIES GST’s premier national tech platform uniting 100+ project submissions from top engineering institutes across India to pitch cutting-edge prototypes before industry jury panels.',
+      h1: '100+ Abstract Submissions from institutes across India',
+      h2: 'Multi-track project domains in AI/ML, IoT, Cloud & Robotics',
+      link: '#innovations'
+    },
+    enigma: {
+      img: 'images/e (1).jpg',
+      badge: 'CYBER DEFENSE ARENA',
+      cat: '// NATIONAL POSTER COMPETITION',
+      title: 'ENIGMA 2K25',
+      desc: 'National competition exploring digital safety, blockchain security, online privacy, and modern counter-threat engineering evaluated by cybersecurity domain experts.',
+      h1: 'Research on digital privacy, data sovereignty & counter-threat engineering',
+      h2: 'Live presentations evaluated by industry cybersecurity specialists',
+      link: '#enigma'
+    },
+    megabyte: {
+      img: 'images/cd1.jpg',
+      badge: 'FLAGSHIP PUBLICATION',
+      cat: '// STUDENT RESEARCH & EDITORIAL',
+      title: 'MEGABYTE MAGAZINE',
+      desc: 'Our annual student-curated journal spotlighting groundbreaking technical articles, AI research reviews, council milestones, and industry interviews.',
+      h1: 'Annual student research papers, domain breakthroughs & interviews',
+      h2: 'Distributed across campus libraries, engineering faculty & students',
+      link: '#magzine'
+    },
+    hackathons: {
+      img: 'images/w9.jpg',
+      badge: 'RAPID PROTOTYPING',
+      cat: '// 36-HOUR CODE SPRINT',
+      title: 'HACKATHONS & CODE SPRINTS',
+      desc: 'High-adrenaline team hackathons and logic battles challenging student developers to engineer viable solutions to real-world industrial and societal problems.',
+      h1: '36-Hour continuous sprints with dedicated industry mentor support',
+      h2: 'Cash rewards, internship sponsorships & product launch incubation',
+      link: '#event'
+    },
+    workshops: {
+      img: 'images/w2.jpg',
+      badge: 'HANDS-ON MASTERCLASSES',
+      cat: '// TECHNICAL SKILL DEVELOPMENT',
+      title: 'DOMAIN MASTERCLASSES',
+      desc: 'Expert-led interactive workshops in Machine Learning, Cloud Architecture, Cybersecurity, and Fullstack Engineering with hands-on labs and certifications.',
+      h1: 'Hands-on practical code masterclasses in ML, Cloud & DevOps',
+      h2: 'CSI recognized verifiable digital certifications for all attendees',
+      link: '#event'
+    }
+  };
+
+  const dockCards = document.querySelectorAll('.dock-card-item, .spotlight-trigger-item');
+  const previewImg = document.getElementById('spotlight-img');
+  const badgeText = document.getElementById('spotlight-badge-text');
+  const categoryTag = document.getElementById('spotlight-cat');
+  const titleEl = document.getElementById('spotlight-title');
+  const descEl = document.getElementById('spotlight-desc');
+  const h1El = document.getElementById('spotlight-h1');
+  const h2El = document.getElementById('spotlight-h2');
+  const linkBtn = document.getElementById('spotlight-link');
+
+  if (!dockCards.length || !previewImg || !badgeText || !categoryTag || !titleEl || !descEl || !linkBtn) return;
+
+  function setSpotlight(key) {
+    const data = spotlightData[key];
+    if (!data) return;
+
+    // Update active trigger class
+    dockCards.forEach(function (item) {
+      if (item.getAttribute('data-spotlight') === key) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+
+    // Fade out and update preview content
+    previewImg.style.opacity = '0.35';
+    setTimeout(function () {
+      previewImg.src = data.img;
+      badgeText.textContent = data.badge;
+      categoryTag.textContent = data.cat;
+      titleEl.textContent = data.title;
+      descEl.textContent = data.desc;
+      if (h1El) h1El.textContent = data.h1;
+      if (h2El) h2El.textContent = data.h2;
+      linkBtn.href = data.link;
+      previewImg.style.opacity = '1';
+    }, 120);
+  }
+
+  dockCards.forEach(function (item) {
+    const key = item.getAttribute('data-spotlight');
+    item.addEventListener('mouseenter', function () {
+      setSpotlight(key);
+    });
+    item.addEventListener('focus', function () {
+      setSpotlight(key);
+    });
+    item.addEventListener('click', function () {
+      setSpotlight(key);
+    });
+  });
+}
+
 function initAllDotsCanvases() {
   // Monitor internal screen canvas
   setupInteractiveDotCanvas('terminal-dots-canvas', '.terminal-stage', false);
@@ -548,12 +659,14 @@ if (document.readyState === 'loading') {
     initLedToggleLetters();
     initTerminalEnterTrigger();
     initNavLogoPan();
+    initWhatWeDoSpotlight();
     initAllDotsCanvases();
   });
 } else {
   initLedToggleLetters();
   initTerminalEnterTrigger();
   initNavLogoPan();
+  initWhatWeDoSpotlight();
   initAllDotsCanvases();
 }
 

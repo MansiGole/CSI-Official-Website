@@ -1899,10 +1899,10 @@ buttonm {
 
 /* Modern Glass Card with Mild Border */
 .modern-glass-card {
-  background: rgba(8, 12, 22, 0.55);
+  background: rgba(4, 7, 14, 0.4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.15);
   border-radius: 20px;
   padding: 48px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1910,8 +1910,9 @@ buttonm {
 }
 
 .modern-glass-card:hover {
-  border-color: rgba(147, 197, 253, 0.22);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.07);
+  background: rgba(15, 28, 58, 0.35);
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.1);
   transform: translateY(-3px);
 }
 
@@ -2083,58 +2084,528 @@ buttonm {
   box-shadow: 0 0 8px #22c55e;
 }
 
-/* About Block Details */
-.cyber-about-block {
-  margin-bottom: 140px;
+/*==================================================
+  ABOUT US SECTION - ENHANCED CINEMATIC REDESIGN
+==================================================*/
+
+/* 1. Cinematic Team Showcase Frame (HUGE) */
+.team-showcase-container {
+  width: 100%;
+  margin-bottom: 70px;
 }
 
-.cyber-about-block:last-of-type {
+.team-photo-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #03050a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(59, 130, 246, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-photo-frame:hover {
+  border-color: rgba(147, 197, 253, 0.3);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 45px rgba(96, 165, 250, 0.15);
+  transform: translateY(-4px);
+}
+
+.team-photo-img {
+  width: 100%;
+  height: auto;
+  max-height: 640px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.03) brightness(0.98);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-photo-frame:hover .team-photo-img {
+  transform: scale(1.02);
+}
+
+.team-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.95) 100%);
+  pointer-events: none;
+}
+
+/* Floating Caption Bar (No Pills - Minimalist Architecture) */
+.team-caption-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 36px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 5;
+ 
+}
+
+.team-caption-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.pulse-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #60a5fa;
+  box-shadow: 0 0 8px #60a5fa;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+.team-caption-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.team-year-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #94a3b8;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  background: rgba(10, 14, 26, 0.7);
+  white-space: nowrap;
+}
+
+/* Faint Internal Divider */
+.section-internal-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(96, 165, 250, 0.25) 30%, rgba(96, 165, 250, 0.25) 70%, transparent 100%);
+  margin: 70px 0 80px;
+  opacity: 0.7;
+}
+
+/* 2. Story Blocks (Who Are We & What We Do) */
+.about-story-block {
   margin-bottom: 20px;
 }
 
-.cyber-block-label-wrapper {
+.story-label-wrapper {
   margin-bottom: 14px;
 }
 
-.cyber-block-label {
+.story-label {
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   letter-spacing: 0.22em;
   color: #60a5fa;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
-.cyber-block-heading {
+.story-heading {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.85rem, 3vw, 2.6rem);
+  font-size: clamp(1.85rem, 3.2vw, 2.7rem);
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 0.02em;
-  line-height: 1.28;
+  line-height: 1.25;
   margin-bottom: 22px;
 }
 
-.cyber-block-heading .highlight-cyan {
+.story-heading .highlight-cyan {
   color: #93c5fd;
-  text-shadow: 0 0 18px rgba(147, 197, 253, 0.4);
+  text-shadow: 0 0 20px rgba(147, 197, 253, 0.4);
 }
 
-.cyber-body-lead {
+/* CSI Emblem Showcase Glass Card (No Pills) */
+.csi-emblem-showcase-card {
+  position: relative;
+  background: rgba(4, 7, 14, 0.4);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-radius: 20px;
+  padding: 44px 32px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.csi-emblem-showcase-card:hover {
+  background: rgba(15, 28, 58, 0.35);
+  border-color: rgba(96, 165, 250, 0.38);
+  transform: translateY(-3px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(59, 130, 246, 0.12);
+}
+
+.emblem-card-glow {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(25px);
+}
+
+.emblem-icon-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 0 0 25px rgba(96, 165, 250, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.csi-emblem-showcase-card:hover .emblem-icon-wrapper {
+  transform: scale(1.08) rotate(4deg);
+  border-color: #60a5fa;
+  box-shadow: 0 0 35px rgba(96, 165, 250, 0.4);
+}
+
+.csi-emblem-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.emblem-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.emblem-card-sub {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.emblem-card-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.emblem-point-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
   color: #cbd5e1;
+  transition: all 0.25s ease;
+}
+
+.emblem-point-row:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* 3. Interactive What We Do - Top Display Window & Horizontal Dock */
+.about-spotlight-block {
+  position: relative;
+}
+
+/* Top Display Window */
+.spotlight-stage-window {
+  position: relative;
+  background: rgba(4, 7, 14, 0.45);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+  margin-bottom: 20px;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.spotlight-stage-window:hover {
+  background: rgba(12, 22, 46, 0.4);
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95), 0 0 35px rgba(59, 130, 246, 0.1);
+}
+
+.stage-category-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #60a5fa;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.stage-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 
-.cyber-body-text {
+.stage-desc {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.85;
-  color: #94a3b8;
-  margin-bottom: 30px;
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  margin-bottom: 20px;
 }
 
+.stage-highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stage-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.55;
+}
+
+.stage-media-frame {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #020408;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+.stage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spotlight-stage-window:hover .stage-img {
+  transform: scale(1.03);
+}
+
+.stage-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(8, 12, 24, 0.6) 100%);
+  pointer-events: none;
+}
+
+.stage-tag-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  background: rgba(6, 8, 16, 0.88);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 4;
+}
+
+.preview-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #030712 !important;
+  background: #ffffff;
+  padding: 11px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.12);
+}
+
+.preview-action-btn:hover {
+  background: #60a5fa;
+  color: #030712 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.35);
+}
+
+.preview-action-btn i {
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.preview-action-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* Bottom Horizontal Minimalist Cards Dock */
+.spotlight-horizontal-dock {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.dock-card-item {
+  position: relative;
+  background: rgba(4, 7, 14, 0.35);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  border-radius: 12px;
+  padding: 18px 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  overflow: hidden;
+}
+
+.dock-card-item:hover,
+.dock-card-item:focus {
+  background: rgba(20, 36, 75, 0.35);
+  border-color: rgba(96, 165, 250, 0.4);
+  transform: translateY(-3px);
+  outline: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 18px rgba(59, 130, 246, 0.1);
+}
+
+.dock-card-item.active {
+  background: rgba(20, 42, 90, 0.45);
+  border-color: rgba(96, 165, 250, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 24px rgba(59, 130, 246, 0.18);
+  transform: translateY(-3px);
+}
+
+.dock-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dock-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 3px;
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.dock-arrow {
+  color: #64748b;
+  font-size: 15px;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.dock-card-item:hover .dock-arrow,
+.dock-card-item.active .dock-arrow {
+  color: #60a5fa;
+  transform: translate(2px, -2px);
+}
+
+.dock-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.dock-card-item.active .dock-title {
+  color: #93c5fd;
+}
+
+.dock-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.dock-active-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dock-card-item.active .dock-active-indicator {
+  background: #60a5fa;
+  box-shadow: 0 0 10px #60a5fa;
+}
+
+/* Minimalist Sculpted Stats */
 .cyber-stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2174,8 +2645,8 @@ buttonm {
 }
 
 .modern-workshop-card {
-  background: rgba(8, 12, 22, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(4, 7, 14, 0.4);
+  border: 1px solid rgba(96, 165, 250, 0.15);
   border-radius: 16px;
   overflow: hidden;
   height: 100%;
@@ -2187,9 +2658,10 @@ buttonm {
 }
 
 .modern-workshop-card:hover {
+  background: rgba(15, 28, 58, 0.35);
   transform: translateY(-6px);
-  border-color: rgba(147, 197, 253, 0.28);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(59, 130, 246, 0.1);
 }
 
 .workshop-img-frame {
@@ -2636,8 +3108,46 @@ buttonm {
     margin-bottom: 50px !important;
   }
 
-  .cyber-about-block {
-    margin-bottom: 70px !important;
+  .team-showcase-container {
+    margin-bottom: 45px !important;
+  }
+
+  .team-caption-bar {
+    position: relative !important;
+    padding: 20px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    background: rgba(8, 12, 24, 0.95) !important;
+  }
+
+  .team-caption-title {
+    font-size: 1.25rem !important;
+  }
+
+  .section-internal-divider {
+    margin: 45px 0 50px !important;
+  }
+
+  .story-heading {
+    font-size: 1.7rem !important;
+  }
+
+  .csi-emblem-showcase-card {
+    padding: 28px 20px !important;
+  }
+
+  .spotlight-stage-window {
+    padding: 24px 20px !important;
+  }
+
+  .stage-media-frame {
+    height: 220px !important;
+  }
+
+  .spotlight-horizontal-dock {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
   }
 
   .cyber-stats-row {
