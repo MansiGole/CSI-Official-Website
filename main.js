@@ -6,12 +6,12 @@ if (marquee && typeof ScrollMagic !== 'undefined') {
     refreshInterval: 0,
   });
 
-    var scene = new ScrollMagic.Scene({
-      triggerElement: marquee,
-      triggerHook: "onEnter",
-      offset: 0,
-      duration: window.innerHeight + marquee.offsetHeight * 2,
-    });
+  var scene = new ScrollMagic.Scene({
+    triggerElement: marquee,
+    triggerHook: "onEnter",
+    offset: 0,
+    duration: window.innerHeight + marquee.offsetHeight * 2,
+  });
 
   scene.on("progress", function ({ progress }) {
     var startingOffset = 200;
