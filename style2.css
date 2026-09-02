@@ -2235,3 +2235,338 @@ buttonm {
     gap: 20px !important;
   }
 }
+
+/*==================================================
+  SPONSORS SECTION - MODERN MINIMALIST CYBER TERMINAL
+==================================================*/
+
+/*==================================================
+  SPONSORS SECTION - MODERN MINIMALIST CYBER TERMINAL
+==================================================*/
+
+.terminal-sponsors-section {
+  position: relative;
+  z-index: 10;
+  background-color: #000000;
+  background-image: url('images/cyber-dots-bg.svg');
+  background-size: 120px 120px;
+  background-attachment: fixed;
+  padding: 100px 0 40px;
+  color: #e2e8f0;
+  overflow: hidden;
+}
+
+.terminal-sponsors-container {
+  max-width: 1240px;
+}
+
+.terminal-sponsors-section .cyber-about-header {
+  margin-bottom: 35px;
+}
+
+/* Open Terminal Frame (Borderless & Integrated) */
+.sponsors-terminal-frame {
+  position: relative;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+/* Section Framing Header/Footer Technical Bars */
+.sponsors-frame-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  background: transparent;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+  user-select: none;
+}
+
+.sponsors-frame-bar-bottom {
+  border-top: 1px solid rgba(73, 87, 150, 0.35);
+  margin-top: 36px;
+  padding-top: 14px;
+}
+
+.terminal-bar-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-path-text {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.terminal-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-status-badge .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.terminal-box-cursor {
+  color: #60a5fa;
+}
+
+/* Decorative Horizon Arc Canvas */
+.sponsors-visual-canvas {
+  position: relative;
+  width: 100%;
+  height: 65px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sponsors-horizon-arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.85;
+}
+
+/* Showcase Body */
+.sponsors-showcase-content {
+  padding: 20px 0 36px;
+  position: relative;
+  z-index: 2;
+}
+
+.sponsors-tier-group {
+  margin-bottom: 38px;
+}
+
+.sponsors-tier-group:last-child {
+  margin-bottom: 0;
+}
+
+.tier-label-wrapper {
+  margin-bottom: 18px;
+}
+
+.tier-label {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #60a5fa;
+  text-transform: uppercase;
+}
+
+/* Standalone Logo Grid Layout (No Card Backgrounds) */
+.sponsors-logo-grid {
+  display: grid !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* ASSOCIATE SPONSORS: 2-column side-by-side grid */
+.tier-associate-sponsor-grid {
+  grid-template-columns: repeat(2, minmax(180px, 250px)) !important;
+  gap: 24px 44px !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+}
+
+/* PREVIOUS SPONSORS: 4-column desktop grid for the 4 sponsors */
+.tier-previous-sponsor-grid {
+  grid-template-columns: repeat(4, minmax(160px, 220px)) !important;
+  gap: 24px 32px !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  max-width: 960px !important;
+}
+
+/* Clickable Logo Item Link Wrapper */
+.sponsor-logo-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 14px !important;
+  width: 100% !important;
+  height: 75px !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease !important;
+}
+
+.sponsor-logo-item:hover {
+  transform: translateY(-3px) scale(1.06) !important;
+  filter: drop-shadow(0 0 16px rgba(96, 165, 250, 0.45)) !important;
+}
+
+/* Actual Logo Image Element Sizing */
+.terminal-sponsors-section .sponsor-logo-img,
+.sponsor-logo-img {
+  max-width: 180px !important;
+  max-height: 56px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+  filter: brightness(1) opacity(0.95) !important;
+  transition: filter 0.25s ease !important;
+}
+
+.sponsor-logo-item:hover .sponsor-logo-img {
+  filter: brightness(1.2) opacity(1) !important;
+}
+
+/* CTA Footer Wrapper */
+.sponsors-cta-wrapper {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0 10px;
+  text-align: center;
+}
+
+.sponsors-cta-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(73, 87, 150, 0.35), transparent);
+  margin-bottom: 28px;
+}
+
+.sponsors-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-question {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #94a3b8;
+}
+
+.cyber-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #60a5fa;
+  padding: 12px 28px;
+  border-radius: 4px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.45);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cyber-cta-btn:hover {
+  background: rgba(96, 165, 250, 0.2);
+  border-color: #60a5fa;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(96, 165, 250, 0.3);
+  text-decoration: none;
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.cyber-cta-btn:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* Media Queries for Sponsors Section */
+@media (max-width: 991px) {
+  .terminal-sponsors-section {
+    padding: 85px 0 100px;
+  }
+
+  .sponsors-showcase-content {
+    padding: 16px 0 24px;
+  }
+
+  .tier-associate-sponsor-grid {
+    grid-template-columns: repeat(2, minmax(150px, 210px)) !important;
+    gap: 20px 32px !important;
+  }
+
+  .tier-previous-sponsor-grid {
+    grid-template-columns: repeat(2, minmax(150px, 210px)) !important;
+    gap: 24px 28px !important;
+  }
+
+  .sponsor-logo-item {
+    height: 68px !important;
+    padding: 8px 12px !important;
+  }
+
+  .terminal-sponsors-section .sponsor-logo-img,
+  .sponsor-logo-img {
+    max-width: 155px !important;
+    max-height: 48px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .terminal-sponsors-section {
+    padding: 70px 0 85px;
+  }
+
+  .terminal-sponsors-section .cyber-about-header {
+    margin-bottom: 35px !important;
+  }
+
+  .sponsors-showcase-content {
+    padding: 12px 0 20px;
+  }
+
+  .tier-associate-sponsor-grid {
+    grid-template-columns: repeat(2, minmax(130px, 180px)) !important;
+    gap: 16px 20px !important;
+  }
+
+  .tier-previous-sponsor-grid {
+    grid-template-columns: repeat(2, minmax(130px, 180px)) !important;
+    gap: 20px 20px !important;
+  }
+
+  .sponsor-logo-item {
+    height: 62px !important;
+    padding: 6px 10px !important;
+  }
+
+  .terminal-sponsors-section .sponsor-logo-img,
+  .sponsor-logo-img {
+    max-width: 135px !important;
+    max-height: 42px !important;
+  }
+
+  .sponsors-cta-wrapper {
+    padding: 0;
+  }
+
+  .sponsors-frame-bar {
+    padding: 8px 0;
+    font-size: 11px;
+  }
+}

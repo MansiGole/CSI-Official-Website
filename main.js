@@ -1,66 +1,70 @@
 var width = ["426", "1024"];
 
-var sm = new ScrollMagic.Controller({
-  refreshInterval: 0,
-});
-
 var marquee = document.querySelector(".footer-marquee");
 
-var scene = new ScrollMagic.Scene({
-  triggerElement: marquee,
-  triggerHook: "onEnter",
-  offset: 0,
-  duration: window.innerHeight + marquee.offsetHeight * 2,
-});
+if (marquee) {
+  var sm = new ScrollMagic.Controller({
+    refreshInterval: 0,
+  });
 
-scene.on("progress", function ({ progress }) {
-  var startingOffset = 200;
-  if (window.innerWidth >= width[0] && window.innerWidth <= width[1]) {
-    startingOffset = 250;
-  }
-  if (window.innerWidth > width[0]) {
-    var amount = -600;
-    console.log("!!!!!!");
-    marquee.style.transform = `translate3d(0, 0, 0) translateX(${amount * progress + startingOffset
-      }px)`;
-  }
+  var scene = new ScrollMagic.Scene({
+    triggerElement: marquee,
+    triggerHook: "onEnter",
+    offset: 0,
+    duration: window.innerHeight + marquee.offsetHeight * 2,
+  });
 
-  // change this number to increase or decrease the speed
-});
+  scene.on("progress", function ({ progress }) {
+    var startingOffset = 200;
+    if (window.innerWidth >= width[0] && window.innerWidth <= width[1]) {
+      startingOffset = 250;
+    }
+    if (window.innerWidth > width[0]) {
+      var amount = -600;
+      console.log("!!!!!!");
+      marquee.style.transform = `translate3d(0, 0, 0) translateX(${amount * progress + startingOffset
+        }px)`;
+    }
 
-scene.addTo(sm);
+    // change this number to increase or decrease the speed
+  });
+
+  scene.addTo(sm);
+}
 
 //for previous sponsors
 
-var sm1 = new ScrollMagic.Controller({
-  refreshInterval: 0,
-});
-
 var marquee1 = document.querySelector(".footer-marquee1");
 
-var scene1 = new ScrollMagic.Scene({
-  triggerElement: marquee1,
-  triggerHook: "onEnter",
-  offset: 0,
-  duration: window.innerHeight + marquee1.offsetHeight * 2,
-});
+if (marquee1) {
+  var sm1 = new ScrollMagic.Controller({
+    refreshInterval: 0,
+  });
 
-scene1.on("progress", function ({ progress }) {
-  var startingOffset = -230;
-  if (window.innerWidth >= width[0] && window.innerWidth <= width[1]) {
-    startingOffset = -100;
-  }
-  if (window.innerWidth > width[0]) {
-    var amount = 600;
-    console.log("!!!!!!");
-    marquee1.style.transform = `translate3d(0, 0, 0) translateX(${amount * progress + startingOffset
-      }px)`;
-  }
+  var scene1 = new ScrollMagic.Scene({
+    triggerElement: marquee1,
+    triggerHook: "onEnter",
+    offset: 0,
+    duration: window.innerHeight + marquee1.offsetHeight * 2,
+  });
 
-  // change this number to increase or decrease the speed
-});
+  scene1.on("progress", function ({ progress }) {
+    var startingOffset = -230;
+    if (window.innerWidth >= width[0] && window.innerWidth <= width[1]) {
+      startingOffset = -100;
+    }
+    if (window.innerWidth > width[0]) {
+      var amount = 600;
+      console.log("!!!!!!");
+      marquee1.style.transform = `translate3d(0, 0, 0) translateX(${amount * progress + startingOffset
+        }px)`;
+    }
 
-scene1.addTo(sm1);
+    // change this number to increase or decrease the speed
+  });
+
+  scene1.addTo(sm1);
+}
 
 
 
