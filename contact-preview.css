@@ -46,45 +46,45 @@ body {
 }
 
 .cyber-section-index .index-badge {
-  font-family: 'Orbitron', monospace;
-  font-size: 13px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: #60a5fa;
+  color: #00f0ff;
   padding: 4px 10px;
-  border: 1px solid rgba(96, 165, 250, 0.45);
+  border: 1px solid rgba(0, 240, 255, 0.45);
   border-radius: 2px;
-  background: rgba(59, 130, 246, 0.08);
+  background: rgba(0, 240, 255, 0.08);
   letter-spacing: 0.1em;
 }
 
 .cyber-section-index .index-line {
   width: 45px;
   height: 1px;
-  background: rgba(96, 165, 250, 0.4);
+  background: rgba(0, 240, 255, 0.4);
 }
 
 .cyber-section-index .index-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.78rem;
   letter-spacing: 0.25em;
-  color: #94a3b8;
-  font-weight: 600;
+  color: #dee995;
+  font-weight: 700;
 }
 
 .cyber-about-hero-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
-  font-weight: 900;
-  letter-spacing: 0.05em;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
   line-height: 1.22;
   color: #ffffff;
   margin-bottom: 20px;
-  text-shadow: 0 0 35px rgba(96, 165, 250, 0.25);
+  text-shadow: 0 0 35px rgba(0, 240, 255, 0.25);
 }
 
 .cyber-about-hero-subtitle {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
   font-weight: 400;
   color: #94a3b8;
   line-height: 1.7;
@@ -99,30 +99,30 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 10px;
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(96, 165, 250, 0.35);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #60a5fa;
+  color: #00f0ff;
   margin-bottom: 28px;
 }
 
 /* Contact Heading */
 .contact-main-heading {
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 900;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
   letter-spacing: 0.04em;
   color: #ffffff;
   margin-bottom: 16px;
-  text-shadow: 0 0 30px rgba(96, 165, 250, 0.2);
+  text-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
 }
 
 /* Contact Subtitle */
 .contact-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
   font-weight: 400;
   color: #94a3b8;
   line-height: 1.65;
@@ -140,8 +140,9 @@ body {
 }
 
 .contact-info-item {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
   color: #94a3b8;
   text-decoration: none;
   letter-spacing: 0.02em;
@@ -149,7 +150,7 @@ body {
 }
 
 .contact-info-item:hover {
-  color: #60a5fa;
+  color: #00f0ff;
 }
 
 .contact-info-separator {
@@ -179,12 +180,12 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(96, 165, 250, 0.25);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #60a5fa;
+  color: #00f0ff;
   flex-shrink: 0;
 }
 
@@ -196,32 +197,33 @@ body {
 }
 
 .member-name {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #f1f5f9;
-  letter-spacing: 0.03em;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
 }
 
 .member-role {
-  font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  font-weight: 600;
-  color: #60a5fa;
-  letter-spacing: 0.05em;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #94a3b8;
+  letter-spacing: 0.02em;
 }
 
 .member-phone {
-  font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  color: #64748b;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #00f0ff;
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.25s ease;
 }
 
 .member-phone:hover {
-  color: #60a5fa;
+  color: #dee995;
 }
 
 /* Social Links Row */
@@ -237,7 +239,7 @@ body {
   height: 44px;
   border-radius: 8px;
   background: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  border: 1px solid rgba(0, 240, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,11 +249,11 @@ body {
 }
 
 .social-icon-btn:hover {
-  background: rgba(59, 130, 246, 0.15);
-  border-color: rgba(96, 165, 250, 0.5);
-  color: #60a5fa;
+  background: rgba(0, 240, 255, 0.15);
+  border-color: rgba(0, 240, 255, 0.5);
+  color: #00f0ff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 240, 255, 0.2);
 }
 
 /* Map Container */
@@ -275,15 +277,15 @@ body {
   position: absolute;
   top: 12px;
   left: 12px;
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: #60a5fa;
+  color: #00f0ff;
   letter-spacing: 0.1em;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   padding: 4px 10px;
   border-radius: 4px;
-  border: 1px solid rgba(96, 165, 250, 0.3);
+  border: 1px solid rgba(0, 240, 255, 0.35);
   z-index: 5;
   pointer-events: none;
 }
@@ -299,7 +301,7 @@ body {
 }
 
 .contact-form-panel:hover {
-  border-color: rgba(96, 165, 250, 0.3);
+  border-color: rgba(0, 240, 255, 0.3);
 }
 
 /* Subtle grid pattern on top-right corner */
@@ -340,10 +342,10 @@ body {
 }
 
 .form-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 11px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.8rem;
   font-weight: 700;
-  color: #e2e8f0;
+  color: #dee995;
   letter-spacing: 0.06em;
 }
 
@@ -355,8 +357,9 @@ body {
   border: 1px solid rgba(73, 87, 150, 0.25);
   border-radius: 6px;
   color: #f1f5f9;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
   transition: all 0.3s ease;
   outline: none;
 }
@@ -369,8 +372,8 @@ body {
 
 .cyber-form-input:focus,
 .cyber-form-textarea:focus {
-  border-color: rgba(96, 165, 250, 0.5);
-  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.08), 0 0 20px rgba(96, 165, 250, 0.1);
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.08), 0 0 20px rgba(0, 240, 255, 0.1);
   background: rgba(15, 23, 42, 0.7);
 }
 
@@ -384,26 +387,26 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 12px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #f1f5f9;
+  color: #00f0ff;
   padding: 14px 28px;
   border-radius: 6px;
-  background: rgba(59, 130, 246, 0.15);
-  border: 1px solid rgba(96, 165, 250, 0.4);
+  background: rgba(0, 240, 255, 0.12);
+  border: 1px solid rgba(0, 240, 255, 0.45);
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
 }
 
 .cyber-submit-btn:hover {
-  background: rgba(96, 165, 250, 0.25);
-  border-color: #60a5fa;
+  background: rgba(0, 240, 255, 0.25);
+  border-color: #00f0ff;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 25px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 4px 25px rgba(0, 240, 255, 0.35);
 }
 
 .cyber-submit-btn .btn-arrow {

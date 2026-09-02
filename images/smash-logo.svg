@@ -9,8 +9,8 @@
       <path d="M 45 22 L 52 40 L 45 45 Z" fill="#F59E0B" />
     </g>
 
-    <!-- SMASH Wordmark -->
-    <text x="110" y="58" font-family="'Impact', 'Arial Black', sans-serif" font-size="42" font-style="italic" font-weight="900" fill="#E2E8F0" letter-spacing="3px">SMAASH</text>
-    <text x="112" y="78" font-family="'Orbitron', 'Space Mono', monospace" font-size="10" font-weight="800" fill="#F59E0B" letter-spacing="4px">THE POWER PUNCH</text>
+    <!-- SMAAASH Wordmark -->
+    <text x="110" y="58" font-family="'Impact', 'Arial Black', sans-serif" font-size="40" font-style="italic" font-weight="900" fill="#E2E8F0" letter-spacing="2px">SMAAASH</text>
+    <text x="112" y="78" font-family="'Orbitron', 'Space Mono', monospace" font-size="10" font-weight="800" fill="#F59E0B" letter-spacing="3.5px">THE POWER PUNCH</text>
   </g>
 </svg>

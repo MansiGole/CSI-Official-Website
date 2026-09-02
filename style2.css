@@ -2857,8 +2857,43 @@ buttonm {
   max-width: 1240px;
 }
 
-.terminal-sponsors-section .cyber-about-header {
-  margin-bottom: 35px;
+.terminal-sponsors-section .cyber-about-hero-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: clamp(2rem, 3.8vw, 3.2rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.25 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 35px rgba(96, 165, 250, 0.2) !important;
+}
+
+.terminal-sponsors-section .index-badge {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #60a5fa !important;
+  padding: 4px 12px !important;
+  border: 1px solid rgba(96, 165, 250, 0.4) !important;
+  border-radius: 4px !important;
+  background: rgba(59, 130, 246, 0.08) !important;
+  letter-spacing: 0.1em !important;
+}
+
+.terminal-sponsors-section .index-label {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 0.22em !important;
+  color: #94a3b8 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+.terminal-sponsors-section .cyber-about-hero-subtitle {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(0.98rem, 1.25vw, 1.18rem) !important;
+  font-weight: 400 !important;
+  color: #94a3b8 !important;
+  line-height: 1.75 !important;
 }
 
 /* Open Terminal Frame (Borderless & Integrated) */
@@ -2877,9 +2912,10 @@ buttonm {
   justify-content: space-between;
   padding: 10px 0;
   background: transparent;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  letter-spacing: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   color: #94a3b8;
   user-select: none;
 }
@@ -2898,7 +2934,7 @@ buttonm {
 
 .terminal-path-text {
   color: #60a5fa;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .terminal-status-badge {
@@ -2959,8 +2995,8 @@ buttonm {
 
 .tier-label {
   display: inline-block;
-  font-family: 'Space Mono', monospace;
-  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.22em;
   color: #60a5fa;
@@ -2982,13 +3018,13 @@ buttonm {
   margin: 0 auto !important;
 }
 
-/* PREVIOUS SPONSORS: 4-column desktop grid for the 4 sponsors */
+/* PREVIOUS SPONSORS: 5-column desktop grid for the 5 sponsors */
 .tier-previous-sponsor-grid {
-  grid-template-columns: repeat(4, minmax(160px, 220px)) !important;
-  gap: 24px 32px !important;
+  grid-template-columns: repeat(5, minmax(140px, 190px)) !important;
+  gap: 20px 24px !important;
   justify-content: center !important;
   margin: 0 auto !important;
-  max-width: 960px !important;
+  max-width: 1060px !important;
 }
 
 /* Clickable Logo Item Link Wrapper */
@@ -3051,10 +3087,10 @@ buttonm {
 }
 
 .cta-question {
-  font-family: 'Space Mono', monospace;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   color: #94a3b8;
 }
 
@@ -3062,8 +3098,8 @@ buttonm {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.16em;
   color: #60a5fa;
