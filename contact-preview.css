@@ -32,7 +32,7 @@ body {
   max-width: 1240px;
 }
 
-/* ── Section Header (Left-Aligned, matching other sections) ──────────── */
+/* ── Section Header (Left-Aligned, matching Sponsors/About) ──────────── */
 .cyber-about-header {
   margin-bottom: 50px;
   max-width: 960px;
@@ -42,54 +42,55 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .cyber-section-index .index-badge {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12.5px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: #60a5fa;
-  padding: 4px 12px;
-  border: 1px solid rgba(96, 165, 250, 0.4);
-  border-radius: 4px;
-  background: rgba(59, 130, 246, 0.08);
+  color: #00f0ff;
+  padding: 4px 10px;
+  border: 1px solid rgba(0, 240, 255, 0.45);
+  border-radius: 2px;
+  background: rgba(0, 240, 255, 0.08);
   letter-spacing: 0.1em;
 }
 
 .cyber-section-index .index-line {
-  width: 40px;
+  width: 45px;
   height: 1px;
-  background: rgba(96, 165, 250, 0.35);
+  background: rgba(0, 240, 255, 0.4);
 }
 
 .cyber-section-index .index-label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  color: #94a3b8;
-  font-weight: 600;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  color: #dee995;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .cyber-about-hero-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
   font-weight: 800;
-  letter-spacing: 0.02em;
-  line-height: 1.25;
+  letter-spacing: 0.04em;
+  line-height: 1.22;
   color: #ffffff;
-  margin-bottom: 16px;
-  text-shadow: 0 0 35px rgba(96, 165, 250, 0.2);
+  margin-bottom: 20px;
+  text-shadow: 0 0 35px rgba(0, 240, 255, 0.25);
 }
 
 .cyber-about-hero-subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(0.98rem, 1.25vw, 1.18rem);
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
   font-weight: 400;
   color: #94a3b8;
-  line-height: 1.75;
-  max-width: 780px;
+  line-height: 1.7;
+  max-width: 800px;
+  letter-spacing: 0.01em;
 }
 
 /* ── LEFT COLUMN: Contact Info ─────────────────────────────────────── */
@@ -99,30 +100,30 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 10px;
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(96, 165, 250, 0.35);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #60a5fa;
+  color: #00f0ff;
   margin-bottom: 28px;
 }
 
 /* Contact Heading */
 .contact-main-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   color: #ffffff;
   margin-bottom: 16px;
-  text-shadow: 0 0 30px rgba(96, 165, 250, 0.2);
+  text-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
 }
 
 /* Contact Subtitle */
 .contact-subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
   font-weight: 400;
   color: #94a3b8;
   line-height: 1.65;
@@ -140,7 +141,7 @@ body {
 }
 
 .contact-info-item {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Gill Sans', Calibri, sans-serif;
   font-size: 0.92rem;
   font-weight: 400;
   color: #94a3b8;
@@ -150,7 +151,7 @@ body {
 }
 
 .contact-info-item:hover {
-  color: #60a5fa;
+  color: #00f0ff;
 }
 
 .contact-info-separator {
@@ -169,7 +170,7 @@ body {
   align-items: center;
   gap: 14px;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(73, 87, 150, 0.15);
 }
 
 .team-member-row:last-child {
@@ -180,12 +181,12 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(96, 165, 250, 0.25);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #60a5fa;
+  color: #00f0ff;
   flex-shrink: 0;
 }
 
@@ -197,33 +198,33 @@ body {
 }
 
 .member-name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: #ffffff;
   letter-spacing: 0.02em;
 }
 
 .member-role {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.85rem;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
   font-weight: 400;
   color: #94a3b8;
   letter-spacing: 0.02em;
 }
 
 .member-phone {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Consolas, 'Courier New', monospace;
   font-size: 0.82rem;
-  font-weight: 600;
-  color: #60a5fa;
+  font-weight: 700;
+  color: #00f0ff;
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.25s ease;
 }
 
 .member-phone:hover {
-  color: #93c5fd;
+  color: #dee995;
 }
 
 /* Social Links Row */
@@ -239,7 +240,7 @@ body {
   height: 44px;
   border-radius: 8px;
   background: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  border: 1px solid rgba(0, 240, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,11 +250,11 @@ body {
 }
 
 .social-icon-btn:hover {
-  background: rgba(59, 130, 246, 0.15);
-  border-color: rgba(96, 165, 250, 0.5);
-  color: #60a5fa;
+  background: rgba(0, 240, 255, 0.15);
+  border-color: rgba(0, 240, 255, 0.5);
+  color: #00f0ff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 240, 255, 0.2);
 }
 
 /* Map Container */
@@ -262,7 +263,7 @@ body {
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  border: 1px solid rgba(73, 87, 150, 0.2);
   position: relative;
 }
 
@@ -277,35 +278,31 @@ body {
   position: absolute;
   top: 12px;
   left: 12px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: #60a5fa;
-  letter-spacing: 0.15em;
-  background: rgba(6, 8, 16, 0.85);
+  color: #00f0ff;
+  letter-spacing: 0.1em;
+  background: rgba(0, 0, 0, 0.75);
   padding: 4px 10px;
   border-radius: 4px;
-  border: 1px solid rgba(96, 165, 250, 0.35);
+  border: 1px solid rgba(0, 240, 255, 0.35);
   z-index: 5;
   pointer-events: none;
 }
 
 /* ── RIGHT COLUMN: Contact Form Panel ──────────────────────────────── */
 .contact-form-panel {
-  background: rgba(4, 7, 14, 0.4);
-  border: 1px solid rgba(96, 165, 250, 0.15);
-  border-radius: 16px;
+  background: rgba(12, 17, 30, 0.4);
+  border: 1px solid rgba(73, 87, 150, 0.2);
+  border-radius: 12px;
   padding: 36px 32px;
   height: 100%;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transition: all 0.35s ease;
+  transition: border-color 0.3s ease;
 }
 
 .contact-form-panel:hover {
-  background: rgba(15, 28, 58, 0.35);
-  border-color: rgba(96, 165, 250, 0.35);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(59, 130, 246, 0.1);
+  border-color: rgba(0, 240, 255, 0.3);
 }
 
 /* Subtle grid pattern on top-right corner */
@@ -322,8 +319,8 @@ body {
   width: 120px;
   height: 60px;
   background-image:
-    linear-gradient(rgba(96, 165, 250, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(96, 165, 250, 0.15) 1px, transparent 1px);
+    linear-gradient(rgba(73, 87, 150, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 87, 150, 0.15) 1px, transparent 1px);
   background-size: 16px 16px;
   mask-image: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.1) 100%);
   -webkit-mask-image: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.1) 100%);
@@ -346,11 +343,11 @@ body {
 }
 
 .form-label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #cbd5e1;
-  letter-spacing: 0.05em;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #dee995;
+  letter-spacing: 0.06em;
 }
 
 .cyber-form-input,
@@ -358,10 +355,10 @@ body {
   width: 100%;
   padding: 12px 16px;
   background: rgba(10, 15, 28, 0.6);
-  border: 1px solid rgba(96, 165, 250, 0.2);
-  border-radius: 8px;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  border: 1px solid rgba(73, 87, 150, 0.25);
+  border-radius: 6px;
+  color: #f1f5f9;
+  font-family: 'Gill Sans', Calibri, sans-serif;
   font-size: 0.92rem;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -370,15 +367,15 @@ body {
 
 .cyber-form-input::placeholder,
 .cyber-form-textarea::placeholder {
-  color: #64748b;
-  font-family: 'Poppins', sans-serif;
+  color: #4a5568;
+  font-family: 'Gill Sans', Calibri, sans-serif;
   font-style: normal;
 }
 
 .cyber-form-input:focus,
 .cyber-form-textarea:focus {
-  border-color: rgba(96, 165, 250, 0.6);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12), 0 0 20px rgba(59, 130, 246, 0.15);
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.08), 0 0 20px rgba(0, 240, 255, 0.1);
   background: rgba(15, 23, 42, 0.7);
 }
 
@@ -392,36 +389,35 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11.5px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  color: #030712 !important;
-  background: #ffffff;
-  padding: 12px 26px;
+  letter-spacing: 0.12em;
+  color: #00f0ff;
+  padding: 14px 28px;
   border-radius: 6px;
-  border: 1px solid #ffffff;
+  background: rgba(0, 240, 255, 0.12);
+  border: 1px solid rgba(0, 240, 255, 0.45);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
   align-self: flex-start;
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.12);
 }
 
 .cyber-submit-btn:hover {
-  background: #60a5fa;
-  border-color: #60a5fa;
-  color: #030712 !important;
+  background: rgba(0, 240, 255, 0.25);
+  border-color: #00f0ff;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.35);
+  box-shadow: 0 4px 25px rgba(0, 240, 255, 0.35);
 }
 
 .cyber-submit-btn .btn-arrow {
   font-size: 16px;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .cyber-submit-btn:hover .btn-arrow {
-  transform: translateX(4px);
+  transform: translateX(3px);
 }
 
 /* ── Thin Section Divider ──────────────────────────────────────────── */

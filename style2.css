@@ -2857,43 +2857,57 @@ buttonm {
   max-width: 1240px;
 }
 
+#sponsors .cyber-about-hero-title,
 .terminal-sponsors-section .cyber-about-hero-title {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: clamp(2rem, 3.8vw, 3.2rem) !important;
+  font-family: 'Gill Sans', Calibri, sans-serif !important;
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem) !important;
   font-weight: 800 !important;
-  letter-spacing: 0.02em !important;
-  line-height: 1.25 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.22 !important;
   color: #ffffff !important;
-  text-shadow: 0 0 35px rgba(96, 165, 250, 0.2) !important;
+  text-shadow: 0 0 35px rgba(0, 240, 255, 0.25) !important;
 }
 
-.terminal-sponsors-section .index-badge {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 12.5px !important;
+#sponsors .index-badge,
+.terminal-sponsors-section .index-badge,
+#sponsors .cyber-section-index .index-badge {
+  font-family: Consolas, 'Courier New', monospace !important;
+  font-size: 0.78rem !important;
   font-weight: 700 !important;
-  color: #60a5fa !important;
-  padding: 4px 12px !important;
-  border: 1px solid rgba(96, 165, 250, 0.4) !important;
-  border-radius: 4px !important;
-  background: rgba(59, 130, 246, 0.08) !important;
+  color: #00f0ff !important;
+  padding: 4px 10px !important;
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  border-radius: 2px !important;
+  background: rgba(0, 240, 255, 0.08) !important;
   letter-spacing: 0.1em !important;
 }
 
-.terminal-sponsors-section .index-label {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 12px !important;
-  letter-spacing: 0.22em !important;
-  color: #94a3b8 !important;
-  font-weight: 600 !important;
+#sponsors .index-line,
+.terminal-sponsors-section .index-line,
+#sponsors .cyber-section-index .index-line {
+  width: 45px !important;
+  height: 1px !important;
+  background: rgba(0, 240, 255, 0.4) !important;
+}
+
+#sponsors .index-label,
+.terminal-sponsors-section .index-label,
+#sponsors .cyber-section-index .index-label {
+  font-family: Consolas, 'Courier New', monospace !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.25em !important;
+  color: #dee995 !important;
+  font-weight: 700 !important;
   text-transform: uppercase !important;
 }
 
+#sponsors .cyber-about-hero-subtitle,
 .terminal-sponsors-section .cyber-about-hero-subtitle {
-  font-family: 'Poppins', sans-serif !important;
-  font-size: clamp(0.98rem, 1.25vw, 1.18rem) !important;
+  font-family: 'Gill Sans', Calibri, sans-serif !important;
+  font-size: 0.92rem !important;
   font-weight: 400 !important;
   color: #94a3b8 !important;
-  line-height: 1.75 !important;
+  line-height: 1.7 !important;
 }
 
 /* Open Terminal Frame (Borderless & Integrated) */
@@ -2912,9 +2926,9 @@ buttonm {
   justify-content: space-between;
   padding: 10px 0;
   background: transparent;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   color: #94a3b8;
   user-select: none;
@@ -2933,7 +2947,7 @@ buttonm {
 }
 
 .terminal-path-text {
-  color: #60a5fa;
+  color: #00f0ff;
   font-weight: 700;
 }
 
@@ -2952,7 +2966,7 @@ buttonm {
 }
 
 .terminal-box-cursor {
-  color: #60a5fa;
+  color: #00f0ff;
 }
 
 /* Decorative Horizon Arc Canvas */
@@ -2993,14 +3007,22 @@ buttonm {
   margin-bottom: 18px;
 }
 
+#sponsors .tier-label,
+.terminal-sponsors-section .tier-label,
 .tier-label {
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  color: #60a5fa;
-  text-transform: uppercase;
+  font-family: Consolas, 'Courier New', monospace !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  color: #dee995 !important;
+  text-transform: uppercase !important;
+}
+
+#sponsors .accent-slash,
+.tier-label .accent-slash {
+  color: #00f0ff !important;
+  margin-right: 2px;
 }
 
 /* Standalone Logo Grid Layout (No Card Backgrounds) */
@@ -3044,7 +3066,7 @@ buttonm {
 
 .sponsor-logo-item:hover {
   transform: translateY(-3px) scale(1.06) !important;
-  filter: drop-shadow(0 0 16px rgba(96, 165, 250, 0.45)) !important;
+  filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.45)) !important;
 }
 
 /* Actual Logo Image Element Sizing */
@@ -3075,7 +3097,7 @@ buttonm {
 
 .sponsors-cta-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(73, 87, 150, 0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.35), transparent);
   margin-bottom: 28px;
 }
 
@@ -3087,10 +3109,10 @@ buttonm {
 }
 
 .cta-question {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 0.92rem;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   color: #94a3b8;
 }
 
@@ -3098,25 +3120,25 @@ buttonm {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  color: #60a5fa;
+  letter-spacing: 0.12em;
+  color: #00f0ff;
   padding: 12px 28px;
   border-radius: 4px;
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(96, 165, 250, 0.45);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.45);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .cyber-cta-btn:hover {
-  background: rgba(96, 165, 250, 0.2);
-  border-color: #60a5fa;
+  background: rgba(0, 240, 255, 0.25);
+  border-color: #00f0ff;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
   text-decoration: none;
 }
 
